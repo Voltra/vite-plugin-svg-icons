@@ -12,7 +12,7 @@
     "lint:pretty": "pretty-quick --staged",
     "lint:eslint": "eslint \"packages/**/*.{ts,tsx}\" --fix",
     "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm || corepack enable",
+    "preinstall": "npx only-allow pnpm",
     "test": "vitest"
   },
   "keywords": [
@@ -32,28 +32,28 @@
   },
   "homepage": "https://github.com/vbenjs/vite-plugin-svg-icons/tree/main/#readme",
   "devDependencies": {
-    "@commitlint/cli": "^16.1.0",
-    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
     "@types/html-minifier-terser": "^6.1.0",
-    "@types/jsdom": "^16.2.14",
-    "@types/node": "^17.0.13",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
-    "commitizen": "^4.2.4",
+    "@types/jsdom": "^16.2.15",
+    "@types/node": "^17.0.45",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "commitizen": "^4.3.0",
     "conventional-changelog-cli": "^2.2.2",
     "cross-env": "^7.0.3",
-    "eslint": "^8.7.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-html": "^6.2.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.2",
-    "prettier": "^2.5.1",
+    "lint-staged": "^12.5.0",
+    "prettier": "^2.8.8",
     "rimraf": "^3.0.2",
-    "tsup": "^5.11.11",
-    "typescript": "^4.5.5",
+    "tsup": "^5.12.9",
+    "typescript": "^4.9.5",
     "unbuild": "^0.6.9",
-    "vite": "^2.7.13",
-    "vitest": "^0.2.5"
+    "vite": "^2.9.18",
+    "vitest": "^0.2.8"
   },
   "lint-staged": {
     "*": [
@@ -65,5 +65,29 @@
     "packages/**/*.d.ts": [
       "eslint --ext .ts"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@<2.9.13": ">=2.9.13",
+      "follow-redirects@<1.14.8": ">=1.14.8",
+      "postcss@<7.0.36": ">=7.0.36",
+      "decode-uri-component@<0.2.1": ">=0.2.1",
+      "loader-utils@<1.4.1": ">=1.4.1",
+      "postcss@<8.4.31": ">=8.4.31",
+      "vite@<2.9.16": ">=2.9.16",
+      "loader-utils@>=1.0.0 <1.4.2": ">=1.4.2",
+      "vite@>=2.7.0 <=2.9.16": ">=2.9.17",
+      "follow-redirects@<1.15.4": ">=1.15.4",
+      "semver@>=7.0.0 <7.5.2": ">=7.5.2",
+      "semver@>=6.0.0 <6.3.1": ">=6.3.1",
+      "json5@<1.0.2": ">=1.0.2",
+      "json5@>=2.0.0 <2.2.2": ">=2.2.2",
+      "follow-redirects@<=1.15.5": ">=1.15.6",
+      "@babel/traverse@<7.23.2": ">=7.23.2",
+      "vite@>=2.7.0 <=2.9.17": ">=2.9.18",
+      "minimist@>=1.0.0 <1.2.6": ">=1.2.6",
+      "async@>=2.0.0 <2.6.4": ">=2.6.4",
+      "braces@<3.0.3": ">=3.0.3"
+    }
   }
 }
