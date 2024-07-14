@@ -4,14 +4,15 @@
   "version": "2.0.1",
   "license": "MIT",
   "author": "Vben",
+  "packageManager": "pnpm@6.35.1",
   "scripts": {
-    "stub": "pnpm run prepack --filter ./packages -- --stub",
-    "postinstall": "pnpm run stub",
+    "stub": "corepack pnpm run prepack --filter ./packages -- --stub",
+    "postinstall": "corepack pnpm run stub",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint:pretty": "pretty-quick --staged",
     "lint:eslint": "eslint \"packages/**/*.{ts,tsx}\" --fix",
     "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "npx only-allow pnpm || corepack enable",
     "test": "vitest"
   },
   "keywords": [
