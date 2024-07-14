@@ -90,6 +90,8 @@ export function createSvgIconsPlugin(opt: ViteSvgIconsPlugin): Plugin {
         const registerId = `/@id/${SVG_ICONS_REGISTER_NAME}`
         const clientId = `/@id/${SVG_ICONS_CLIENT}`
         if ([clientId, registerId].some((item) => url.endsWith(item))) {
+          res.setHeader('Content-Type', 'application/javascript')
+          res.setHeader('Cache-Control', 'no-cache')
           const { code, idSet } = await createModuleCode(
             cache,
             svgoOptions as OptimizeOptions,
