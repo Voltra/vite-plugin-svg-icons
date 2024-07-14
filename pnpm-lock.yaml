@@ -40,6 +40,7 @@ importers:
       eslint-plugin-html: ^6.2.0
       husky: ^7.0.4
       lint-staged: ^12.5.0
+      pnpm: ^7.33.7
       prettier: ^2.8.8
       rimraf: ^3.0.2
       tsup: ^5.12.9
@@ -63,6 +64,7 @@ importers:
       eslint-plugin-html: 6.2.0
       husky: 7.0.4
       lint-staged: 12.5.0
+      pnpm: 7.33.7
       prettier: 2.8.8
       rimraf: 3.0.2
       tsup: 5.12.9_typescript@4.9.5
@@ -6458,6 +6460,15 @@ packages:
       confbox: 0.1.7
       mlly: 1.7.1
       pathe: 1.1.2
+    dev: true
+
+  /pnpm/7.33.7:
+    resolution:
+      {
+        integrity: sha512-ev4kEGQrOcaY30baTOXHIxpczjYGmNafjPj0IlfUCz5D8jEFOwe43oSf1P+/SnH/V7g1E3d3o1I4jz09p0cgDg==,
+      }
+    engines: { node: '>=14.6' }
+    hasBin: true
     dev: true
 
   /portfinder/1.0.28:
